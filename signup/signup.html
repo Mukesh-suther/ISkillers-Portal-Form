@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Signup</title>
+  <link rel="stylesheet" href="./signup.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Bree+Serif&display=swap" rel="stylesheet" />
+  <script src="https://www.gstatic.com/firebasejs/6.0.4/firebase-app.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/6.0.4/firebase-auth.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/6.0.4/firebase-database.js"></script>
+</head>
+
+<body>
+  <div id="container" class="display">
+    <div class="formdiv">
+      <div id="logogwords" class="display">
+        <p>Student Signup</p>
+      </div>
+      <div id="iskillers-logo" class="display">
+        <img src="./colorlogo-01.png" alt="logo" />
+      </div>
+      <div id="classesbuttonsdiv" class="display">
+        <div id="physicalbutton" class="classesbutton">Physical</div>
+        <div id="onlinebutton" class="classesbutton">Online</div>
+      </div>
+      <p id="classess-details">Apply form here for physical classes.</p>
+      <form name="myForm" onsubmit="return false" id="form" class="display">
+        <input type="text" id="name" class="inputs" placeholder="Name"  />
+        <input type="text" id="fname" class="inputs" placeholder="Father Name"  />
+        <input type="email" id="email" class="inputs" placeholder="Email"  />
+        <input type="password" id="password" class="inputs" placeholder="Password" maxlength="6" minlength="6"
+           />
+        <input type="number" id="cnic" class="inputs" placeholder="CNIC" maxlength="13"  />
+        <input type="number" id="mobileno" class="inputs" placeholder="Mobile Number" maxlength="11" minlength="11"
+           />
+        <select name="courses" id="courses" class="inputs" style="width: 80%; padding-left: 2px" >
+          <option value="" id="selectcourses" selected style="color: rgb(74, 74, 74)">
+            Select Courses
+          </option>
+          <option value="Web development & Web Designing" class="options">
+            Web development & Web Designing
+          </option>
+          <option value="Graphic Designing" class="options">
+            Graphic Designing
+          </option>
+          <option value="Wordpress" class="options">Wordpress</option>
+          <option value="Mobile App Development" class="options">
+            Mobile App Development
+          </option>
+          <option value="Freelancing" class="options">Freelancing</option>
+        </select>
+        <div class="inputs" id="radiobutton" style="display: flex; padding-left: 6px; width: 76%">
+          <p style="margin-right: 10px;">
+            Select Gender:
+          </p>
+          <input type="radio" value="Male" name="gender" class="radiobuttons" />
+          Male
+          <input type="radio" name="gender" value="female" class="radiobuttons" />
+          Female
+        </div>
+        <div class="inputs" id="checkboxdiv">
+          <p>Select Qualification:</p>
+          <input type="checkbox" name="Qualification" value="Matriculation" id="Matriculation" class="checkboxes" />
+          Matriculation
+          <input type="checkbox" name="Qualification" value="Intermediate" id="Intermediate" class="checkboxes" />
+          Intermediate
+          <input type="checkbox" name="Qualification" value="Graduate" id="Graduate" class="checkboxes" />
+          Graduate
+        </div>
+        <p id="signupmessage"></p>
+        <div class="logindetailsdiv">
+          <p>Already a Member?</p> <a href="./../login/login.html" id="Loginbutton">Login</a>
+        </div>
+        <div class="button" id="signupbuttondiv">
+          <button id="submitbutton" onclick="signin()">Sign Up</button>
+        </div>
+      </form>
+    </div>
+  </div>
+</body>
+<script src="./signup.js"></script>
+</html>

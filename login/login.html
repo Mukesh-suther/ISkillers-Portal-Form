@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Login</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Bree+Serif&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="./login.css" />
+    <script src="https://www.gstatic.com/firebasejs/6.0.4/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/6.0.4/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/6.0.4/firebase-database.js"></script>
+  </head>
+  <body>
+    <div id="container">
+      <div id="loginform">
+        <div id="loginformtitle">
+          <p>Student Login</p>
+        </div>
+        <div id="iskillerslogo">
+          <img src="./../signup/colorlogo-01.png" alt="" />
+        </div>
+        <div>
+          <form id="form" onsubmit="return false">
+            <input
+              type="email"
+              id="email"
+              placeholder="Email"
+              class="inputs"
+              required
+            />
+            <input
+              type="password"
+              id="password"
+              placeholder="Password"
+              class="inputs"
+              style="margin-bottom:0px;"
+              required
+            />
+            <p id="login-message"></p>
+            <div class="buttonsdiv">
+              <p id="signup-button">
+                Not a member? <a href="./../signup/signup.html">Signup</a>
+              </p>
+              <p id="forgetbutton"><a href="./forgetpassword.html">Forget password</a></p>
+            </div>
+            <button id="submit-button" onclick="login()">Login</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </body>
+  <script src="./login.js"></script>
+</html>
